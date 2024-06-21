@@ -1,0 +1,26 @@
+services:
+    db:
+        image: postgres:latest
+        environment:
+            POSTGRES_USER: admin
+            POSTGRES_PASSWORD: admin
+            POSTGRES_DB: sampledb
+        ports:
+            - 5432:5432
+        volumes:
+            - .docker/postgresqldata:/var/lib/postgresql/data
+        networks:
+            - laravel
+
+    adminer:
+        image: adminer:latest
+        ports:
+            - 9090:8080
+        depends_on:
+            - db
+        networks:
+            - laravel
+
+networks:
+    laravel:
+        driver: bridge
