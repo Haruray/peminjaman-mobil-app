@@ -14,5 +14,9 @@ Oleh Safiq Faray
 - PHP v8.1.25 (minimal)
 - Docker
 ## How to Run
+- create `.docker/postgresqldata` directory
 - run `docker compose up -d` for running postgresql
 - run `php artisan serve` and `npm run dev`
+
+## Example How To Run
+https://drive.google.com/file/d/11EVSqJapIOjZPzL7DpexsOs_JDAsT3B2/view?usp=sharing 
